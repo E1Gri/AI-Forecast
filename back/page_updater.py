@@ -153,7 +153,7 @@ def getWeather(city, number_of_lags):
     }
 
     archive = request_weather(
-        "https://archive-api.open-meteo.com/v1/archive",
+        "http://archive-api.open-meteo.com/v1/archive",
         archive_params,
     )
 

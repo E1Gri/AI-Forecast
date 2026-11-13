@@ -5,7 +5,7 @@
 Запустите Jupyter Notebook для работы с данными и ML-моделями:
 
 ```bash
-jupyter notebook
+jupyter lab
 ```
 
 ### 2. Запуск сайта и обновления прогноза
@@ -13,7 +13,10 @@ jupyter notebook
 Из корневой директории проекта выполните:
 
 ```bash
-python3.12 back/page_updater.py & python3.12 -m http.server 25565 --bind 0.0.0.0 --directory front
+docker run --rm --init \
+  --name ai-forecast \
+  -p 25565:8000 \
+  ai-forecast
 ```
 
 После запуска веб-интерфейс будет доступен по адресу:
